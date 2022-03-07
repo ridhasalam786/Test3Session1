@@ -1,1 +1,9 @@
+ gcc -g p3original.c;./a.out
+Enter values of n:  5
+Enter values of r:  3
+Given n=5 & r=3, nCr=10 
 
+ gcc -g p3original.c;./a.out
+Enter values of n:  5
+Enter values of r:  4
+Given n=5 & r=4, nCr=5 
