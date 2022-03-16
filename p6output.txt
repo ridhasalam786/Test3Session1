@@ -1,1 +1,8 @@
+ gcc -g p6original.c;./a.out
+Enter a string:     hello world hello
+Number of words in the given string is 3 
 
+
+ gcc -g p6original.c;./a.out
+Enter a string:     ridha salam
+Number of words in the given string is 2 
