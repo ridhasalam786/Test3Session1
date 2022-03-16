@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+
 int input_degree()
 {
   int n;
@@ -16,23 +17,41 @@ float input_x()
   return x;
 }
 
-void input_coefficients(int n,float c[n])
+void input_coefficients(int n,float c[n+1])
 {
   printf ("Enter the coefficients: \t");
-  for(int i=0;i<=x;i++)
+  for(int i=0;i<=n+1;i++)
     scanf ("%f",&c[i]);
 }
 
-float polynomial(int n,float c[n],float x)
+float evaluate_polynomial(int n,float c[n+1],float x)
 {
-  float result=a[0];
-  for(int i=1;i<n;i++)
-    result=result*x+a[i];
+  float result=c[n]*x;
+  for(int i=n-1;i>=1;i--)
+    result=(result+c[i])*x;
+  result=result+c[0];
   return result;
 }
 
-void output(int n,float c[n],float x,float result)
+void output(int n,float c[n+1],float x,float result)
 {
-  printf("Degree=%d,X=%f \n  Coefficients=%f \n  Result=%f \n",n,x,c[x],result);
+  printf("Degree=%d \n X value=%f \n Result=%f \n",n,x,result);
+  printf("Coefficients= \t");
+  for(int i=0;i<=n+1;i++)
+    printf("%d \t",c[i]);
+  printf("Result= \t",result);
 }
 
+int main()
+{
+  int n;
+  n=input_degree();
+  float x;
+  x=input_x();
+  float a[n+1];
+  input_coefficients(n,a[n+1]);
+  float r;
+  r=evaluate_polynomial(n,a[n+1],x);
+  output(n,a[n+1],x,r);
+  return 0;
+}
