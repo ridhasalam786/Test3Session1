@@ -1,1 +1,24 @@
+ gcc -g p2original.c;./a.out
+Enter numerator and denominator of fraction: 
+2 3
+Enter numerator and denominator of fraction: 
+3 4
+Enter numerator and denominator of fraction: 
+4 5
+Fraction 1:2/3 
+Fraction 2:3/4 
+Fraction 3:4/5 
+Largest among the three fractions is 4/5 
 
+
+ gcc -g p2original.c;./a.out
+Enter numerator and denominator of fraction: 
+1 2
+Enter numerator and denominator of fraction: 
+2 4
+Enter numerator and denominator of fraction: 
+4 5
+Fraction 1:1/2 
+Fraction 2:2/4 
+Fraction 3:4/5 
+Largest among the three fractions is 4/5 
